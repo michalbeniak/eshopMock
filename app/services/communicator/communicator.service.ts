@@ -36,14 +36,14 @@ export class CommunicatorService {
   passFirstThreeData(homeComponent: HomeComponentComponent) {
     this.http.get('http://localhost:49649/Product/GetFirstThreeProducts')
       .subscribe(data => {
-        homeComponent.productList = JSON.parse(JSON.stringify(data));
+        homeComponent.productList = new ProductsList(JSON.parse(JSON.stringify(data)));
     });
   }
 
   getAllProducts(shopComponent: ShopComponentComponent) {
     this.http.get('http://localhost:49649/Product/GetAllProducts')
       .subscribe(data => {
-        shopComponent.productList = JSON.parse(JSON.stringify(data));
+        shopComponent.productList = new ProductsList(JSON.parse(JSON.stringify(data)));
     });
   }
 }

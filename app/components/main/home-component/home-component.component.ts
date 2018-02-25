@@ -11,7 +11,8 @@ import { CartServiceService } from '../../../services/cartService/cart-service.s
 })
 export class HomeComponentComponent implements OnInit {
   product: Product = new Product("","",0,"","",1);
-  constructor(private communicatorService:CommunicatorService, public productList: ProductsList, private cartService: CartServiceService) { }
+  productList: ProductsList = new ProductsList(null);
+  constructor(private communicatorService:CommunicatorService, private cartService: CartServiceService) { }
 
   ngOnInit() {
     //this.communicatorService.passData(this);

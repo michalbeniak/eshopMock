@@ -73,7 +73,7 @@ const appRoutes: Routes = [
     ),
     HttpClientModule
   ],
-  providers: [CommunicatorService, ProductsList, CartServiceService,CartService],
+  providers: [CommunicatorService, CartServiceService,CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
