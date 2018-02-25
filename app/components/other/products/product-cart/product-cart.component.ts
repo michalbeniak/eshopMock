@@ -1,7 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Product } from '../../models/product';
-import { CartServiceService } from '../cart-service.service';
-import { CartService } from '../cart.service';
+import { Product } from '../../../../models/product';
+import { CartServiceService } from '../../../../services/cartService/cart-service.service';
+import { CartService } from '../../../../services/storeService/cart.service';
+
 
 @Component({
   selector: 'app-product-cart',

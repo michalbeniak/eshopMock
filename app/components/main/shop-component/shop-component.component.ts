@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ProductsList } from '../../models/products-list';
-import { CommunicatorService } from '../../services/communicator.service';
+import { ProductsList } from '../../../models/products-list';
+import { CommunicatorService } from '../../../services/communicator/communicator.service';
 
 @Component({
   selector: 'app-shop-component',

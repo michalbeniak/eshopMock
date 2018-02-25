@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Product } from './../models/product';
-import { ProductsList } from './../models/products-list';
-import { ProductComponent } from '../app/product/product.component';
-import { AppComponent } from '../app/app.component';
-import { HomeComponentComponent } from '../app/home-component/home-component.component';
-import { ProductDetailComponentComponent } from '../app/product-detail-component/product-detail-component.component';
-import { ShopComponentComponent } from '../app/shop-component/shop-component.component';
+import { Product } from '../../models/product';
+import { ProductsList } from '../../models/products-list';
+import { ProductComponent } from '../../components/other/products/product/product.component';
+import { AppComponent } from '../../app.component';
+import { HomeComponentComponent } from '../../components/main/home-component/home-component.component';
+import { ProductDetailComponentComponent } from '../../components/main/product-detail-component/product-detail-component.component';
+import { ShopComponentComponent } from '../../components/main/shop-component/shop-component.component';
 
 @Injectable()
 export class CommunicatorService {

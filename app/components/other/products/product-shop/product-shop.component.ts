@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Product } from '../../models/product';
+import { Product } from '../../../../models/product';
 
 @Component({
   selector: 'app-product-shop',
@@ -7,7 +7,7 @@ import { Product } from '../../models/product';
   styleUrls: ['./product-shop.component.css']
 })
 export class ProductShopComponent implements OnInit {
-  @Input()  product:Product = new Product("","",0,"","");
+  @Input()  product:Product = new Product("","",0,"","",1);
             btnClass:string = "btnHidden";
   constructor() { }
 

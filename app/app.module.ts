@@ -4,30 +4,30 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
-import { ProductComponent } from './product/product.component';
+import { ProductComponent } from './components/other/products/product/product.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CommunicatorService } from './../services/communicator.service';
-import { ThreeProductsComponent } from './three-products/three-products.component';
-import { ProductsList } from '../models/products-list';
-import { Product } from '../models/product';
-import { BackgroundComponent } from './background/background.component';
-import { ParagraphComponent } from './paragraph/paragraph.component';
-import { MenuComponent } from './menu/menu.component';
-import { MyCartComponent } from './my-cart/my-cart.component';
-import { HomeComponentComponent } from './home-component/home-component.component';
-import { ProductDetailComponentComponent } from './product-detail-component/product-detail-component.component';
-import { FooterComponent } from './footer/footer.component';
-import { CartDetailComponentComponent } from './cart-detail-component/cart-detail-component.component';
-import { ContactComponentComponent } from './contact-component/contact-component.component';
-import { FaqComponentComponent } from './faq-component/faq-component.component';
-import { FaqQuestionComponent } from './faq-question/faq-question.component';
-import { ShopComponentComponent } from './shop-component/shop-component.component';
-import { ProductShopComponent } from './product-shop/product-shop.component';
-import { BlogComponentComponent } from './blog-component/blog-component.component';
-import { BlogComponent } from './blog/blog.component';
-import { CartServiceService } from './cart-service.service';
-import { CartService } from './cart.service';
-import { ProductCartComponent } from './product-cart/product-cart.component';
+import { CommunicatorService } from './services/communicator/communicator.service';
+import { ThreeProductsComponent } from './components/other/products/three-products/three-products.component';
+import { ProductsList } from './models/products-list';
+import { Product } from './models/product';
+import { BackgroundComponent } from './components/other/background/background.component';
+import { ParagraphComponent } from './components/other/paragraph/paragraph.component';
+import { MenuComponent } from './components/main/menu/menu.component';
+import { MyCartComponent } from './components/other/my-cart/my-cart.component';
+import { HomeComponentComponent } from './components/main/home-component/home-component.component';
+import { ProductDetailComponentComponent } from './components/main/product-detail-component/product-detail-component.component';
+import { FooterComponent } from './components/main/footer/footer.component';
+import { CartDetailComponentComponent } from './components/main/cart-detail-component/cart-detail-component.component';
+import { ContactComponentComponent } from './components/main/contact-component/contact-component.component';
+import { FaqComponentComponent } from './components/main/faq-component/faq-component.component';
+import { FaqQuestionComponent } from './components/other/faq-question/faq-question.component';
+import { ShopComponentComponent } from './components/main/shop-component/shop-component.component';
+import { ProductShopComponent } from './components/other/products/product-shop/product-shop.component';
+import { BlogComponentComponent } from './components/main/blog-component/blog-component.component';
+import { BlogComponent } from './components/other/blog/blog.component';
+import { CartServiceService } from './services/cartService/cart-service.service';
+import { CartService } from './services/storeService/cart.service';
+import { ProductCartComponent } from './components/other/products/product-cart/product-cart.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponentComponent },

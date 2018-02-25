@@ -1,10 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Product } from '../../models/product';
+import { Product } from '../../../models/product';
 import { ActivatedRoute } from '@angular/router';
-import { CommunicatorService } from '../../services/communicator.service';
-import { MyCartComponent } from '../my-cart/my-cart.component';
-import { CartServiceService } from '../cart-service.service';
-import { CartService } from '../cart.service';
+import { CommunicatorService } from '../../../services/communicator/communicator.service';
+import { MyCartComponent } from '../../other/my-cart/my-cart.component';
+import { CartServiceService } from '../../../services/cartService/cart-service.service';
+import { CartService } from '../../../services/storeService/cart.service';
 import { forEach } from '@angular/router/src/utils/collection';
 import { variable } from '@angular/compiler/src/output/output_ast';
 

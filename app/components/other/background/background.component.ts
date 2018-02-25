@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ProductsList } from '../../models/products-list';
+import { ProductsList } from '../../../models/products-list';
 
 @Component({
   selector: 'app-background',

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CommunicatorService } from './../../services/communicator.service';
-import { ProductsList } from '../../models/products-list';
-import { BackgroundComponent } from '../background/background.component';
+import { CommunicatorService } from '../../../../services/communicator/communicator.service';
+import { ProductsList } from '../../../../models/products-list';
+import { BackgroundComponent } from '../../background/background.component';
 
 @Component({
   selector: 'app-three-products',

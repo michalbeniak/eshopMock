@@ -1,9 +1,9 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
-import { CommunicatorService } from './../../services/communicator.service';
-import { Product } from '../../models/product';
-import { ProductsList } from '../../models/products-list';
+import { CommunicatorService } from '../../../../services/communicator/communicator.service';
+import { Product } from '../../../../models/product';
+import { ProductsList } from '../../../../models/products-list';
 import { EventEmitter } from 'events';
-import { BackgroundComponent } from '../background/background.component';
+import { BackgroundComponent } from '../../background/background.component';
 
 @Component({
   selector: 'app-product',
@@ -11,7 +11,7 @@ import { BackgroundComponent } from '../background/background.component';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  @Input()  product:Product = new Product("","",0,"","");
+  @Input()  product:Product = new Product("","",0,"","",1);
   @Input()  bgComponent:BackgroundComponent;
   //@Output() currentImage: EventEmitter = new EventEmitter();
   currentImage: string;

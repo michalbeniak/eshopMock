@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductsList } from '../models/products-list';
-import { CommunicatorService } from '../services/communicator.service';
-import { Product } from '../models/product';
+import { ProductsList } from './models/products-list';
+import { CommunicatorService } from './services/communicator/communicator.service';
+import { Product } from './models/product';
 
 @Component({
   selector: 'app-root',

@@ -6,10 +6,10 @@ export class ProductsList {
 
     constructor() {
         this.ProductsList.push(new Product("", "", 
-            0, "", ""));
+            0, "", "",1));
         this.ProductsList.push(new Product("", "", 
-            0, "", ""));
+            0, "", "",1));
         this.ProductsList.push(new Product("", "", 
-            0, "", ""));
+            0, "", "",1));
     }
 }

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../../models/product';
-import { ProductsList } from '../../models/products-list';
-import { CommunicatorService } from '../../services/communicator.service';
-import { CartServiceService } from '../cart-service.service';
+import { Product } from '../../../models/product';
+import { ProductsList } from '../../../models/products-list';
+import { CommunicatorService } from '../../../services/communicator/communicator.service';
+import { CartServiceService } from '../../../services/cartService/cart-service.service';
 
 @Component({
   selector: 'app-home-component',
