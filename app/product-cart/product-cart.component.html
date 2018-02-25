@@ -1,0 +1,14 @@
+<div *ngIf="dataExist" class="cartProduct">
+  <div class="leftValues">
+    <img class="image" src="/assets/testProductImages/First.jpg" alt="">
+    <div class="productDetails">
+      <p class="productTitle">{{product.Name}}</p>
+      <p class="remove" (click)="deleteProduct()">remove</p>
+    </div>      
+  </div>    
+  <div class="rightValues">
+    <p class="price">{{product.Price}}$</p>
+    <p class="quantity"><input value="{{product.Quantity}}" type="text" (blur)="calculateAmmount($event.target.value)"></p>
+    <p class="totalValue">{{total}}$</p>
+  </div>   
+</div>
