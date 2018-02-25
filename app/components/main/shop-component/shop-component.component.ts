@@ -9,13 +9,14 @@ import { Product } from '../../../models/product';
   styleUrls: ['./shop-component.component.css']
 })
 export class ShopComponentComponent implements OnInit {
+
   productList: ProductsList = new ProductsList(null);
+
   constructor(private communicatorService:CommunicatorService) { }
 
   ngOnInit() {
     this.communicatorService.getAllProducts(this);
   }
-
 
   onChange(event) {
     console.log(event);
@@ -32,9 +33,8 @@ export class ShopComponentComponent implements OnInit {
       this.sortZa();
     }
     else if (event.target.value =="newest") {
-      
+      //TO DO      
     }
-
   }
 
   sortAz(){
@@ -42,29 +42,23 @@ export class ShopComponentComponent implements OnInit {
       if (n1.Name > n2.Name) {
           return 1;
       }
-  
       if (n1.Name < n2.Name) {
           return -1;
-      }
-  
+      } 
       return 0;
-  });
-
+    });
   }
 
-  sortZa(){
+   sortZa(){
     this.productList.ProductsList = this.productList.ProductsList.sort((n1,n2) => {
       if (n1.Name < n2.Name) {
           return 1;
-      }
-  
+      }  
       if (n1.Name > n2.Name) {
           return -1;
-      }
-  
+      } 
       return 0;
-  });
-
+    });
   }
 
   sortHighLow(){
@@ -76,17 +70,18 @@ export class ShopComponentComponent implements OnInit {
           return -1;
       }
       return 0;
-  });
+    });
   }
+
   sortLowHigh(){
-  this.productList.ProductsList = this.productList.ProductsList.sort((n1,n2) => {
-    if (n1.Price > n2.Price) {
-        return 1;
-    }
-    if (n1.Price < n2.Price) {
-        return -1;
-    }
-    return 0;
-});
-}
+    this.productList.ProductsList = this.productList.ProductsList.sort((n1,n2) => {
+      if (n1.Price > n2.Price) {
+          return 1;
+      }
+      if (n1.Price < n2.Price) {
+          return -1;
+      }
+      return 0;
+    });
+  }
 }
