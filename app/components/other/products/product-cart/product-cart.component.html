@@ -2,7 +2,9 @@
   <div class="leftValues">
     <img class="image" src="/assets/testProductImages/First.jpg" alt="">
     <div class="productDetails">
-      <p class="productTitle">{{product.Name}}</p>
+      <a routerLink="/product/{{product.Guid}}" routerLinkActive="active">
+        <p class="productTitle">{{product.Name}}</p>     
+      </a>
       <p class="remove" (click)="deleteProduct()">remove</p>
     </div>      
   </div>    
