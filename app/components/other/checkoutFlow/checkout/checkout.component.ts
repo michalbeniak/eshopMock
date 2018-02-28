@@ -13,4 +13,9 @@ export class CheckoutComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSubmit() {
+    
+    console.log("hello");
+    this.cartService.setNextStage();
+  }
 }

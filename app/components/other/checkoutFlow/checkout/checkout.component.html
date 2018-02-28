@@ -1,6 +1,12 @@
-<p>
-  checkout-form-component works!
-</p>
-<div<>TEST COMMIT</div>
-<button (click)= "this.cartService.setBasketStage()" class="button">BACK</button>
-<button (click)= "this.cartService.setNextStage()" class="button">NEXT</button>
+<form (ngSubmit)="onSubmit()" #checkout="ngForm" >
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" required name="name">
+  </div>
+  <button type="submit" 
+  class="button">Submit</button>
+</form>
+<div>
+  <button (click)= "this.cartService.setBasketStage()" class="button">BACK</button>
+
+</div>

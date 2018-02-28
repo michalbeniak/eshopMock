@@ -8,7 +8,7 @@ import { State } from '../../models/state';
 export class CartServiceService {
 
   totalAmmount:number=0;
-  state:State = new State("basket");
+  state:State = new State("checkout");
   constructor(private cart: CartService) { }
 
   ngOnInit() {
