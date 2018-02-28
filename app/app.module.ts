@@ -28,12 +28,15 @@ import { BlogComponent } from './components/other/blog/blog.component';
 import { CartServiceService } from './services/cartService/cart-service.service';
 import { CartService } from './services/storeService/cart.service';
 import { ProductCartComponent } from './components/other/products/product-cart/product-cart.component';
+import { CheckoutComponent } from './components/other/checkoutFlow/checkout/checkout.component';
+import { CartBasketComponent } from './components/other/checkoutFlow//cart-basket/cart-basket.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponentComponent },
   { path: 'shop', component: ShopComponentComponent },
   { path: 'blog', component: BlogComponentComponent }, 
   { path: 'faq', component: FaqComponentComponent },
+  { path: 'checkout', component: CheckoutComponent },
   { path: 'contact', component: ContactComponentComponent },
   { path: 'cart', component: CartDetailComponentComponent },
   { path: 'product/:id', component: ProductDetailComponentComponent},
@@ -62,7 +65,9 @@ const appRoutes: Routes = [
     ProductShopComponent,
     BlogComponentComponent,
     BlogComponent,
-    ProductCartComponent
+    ProductCartComponent,
+    CheckoutComponent,
+    CartBasketComponent
     
   ],
   imports: [

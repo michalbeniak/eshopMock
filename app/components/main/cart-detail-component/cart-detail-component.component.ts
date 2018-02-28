@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../../../models/product';
 import { CartServiceService } from '../../../services/cartService/cart-service.service';
 import { CartService } from '../../../services/storeService/cart.service';
+import { State } from '../../../models/state';
 
 @Component({
   selector: 'app-cart-detail-component',
@@ -10,12 +11,10 @@ import { CartService } from '../../../services/storeService/cart.service';
 })
 export class CartDetailComponentComponent implements OnInit {
   
-  products: Product[];
+
 
   constructor(private cart:CartService, private cartService:CartServiceService ) { }
 
   ngOnInit() {
-    this.products = this.cart.productArray;
-    this.cartService.getTotalAmmount();
   }
 }

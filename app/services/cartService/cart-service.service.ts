@@ -2,11 +2,13 @@ import { Injectable } from '@angular/core';
 import { CartService } from '../storeService/cart.service';
 import { Product } from '../../models/product';
 import { indexDebugNode } from '@angular/core/src/debug/debug_node';
+import { State } from '../../models/state';
 
 @Injectable()
 export class CartServiceService {
 
   totalAmmount:number=0;
+  state:State = new State("basket");
   constructor(private cart: CartService) { }
 
   ngOnInit() {
@@ -38,5 +40,15 @@ export class CartServiceService {
   precisionRound(number, precision) {
     var factor = Math.pow(10, precision);
     return Math.round(number * factor) / factor;
+  }
+
+  setCheckoutStage(){
+    this.state.Status = "checkout";
+  }
+  setBasketStage(){
+    this.state.Status = "basket";
+  }
+  setNextStage(){
+    this.state.Status = "next";
   }
 }
