@@ -1,0 +1,79 @@
+
+.checkoutForm {
+    width:800px;
+    margin:0 auto;
+    background: #c1c1c1;
+}
+.form-group{
+    display: inline-block;
+}
+.form {
+    width: 600px;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+.backWrapper {
+    text-align: left;
+}
+.button {
+    height:50px;
+    width:100px;
+    font-size: 18px;
+    border: none;
+    cursor:pointer;
+
+
+}
+
+.backBtn {
+    color: white;
+    background: #484848;
+}
+.backBtn:hover{
+    color:black;
+    background:#1c7769;
+}
+
+
+
+.nextBtn {
+    float: right;
+    position: relative;
+    right: -100px;
+    bottom: -50px;
+    background: #1c7769;
+    color: white;
+}
+
+
+
+.nextBtn:hover {
+    color:black;
+    background: orangered;
+}
+input {
+    height: 30px;
+    margin: 20px;
+    width: 250px;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    background: #fdfdfd;
+}
+
+::placeholder {
+    color:#4c4c4c;
+    opacity:0.5;
+}
+
+.sectionTitle {
+    text-align: left;
+    padding-top: 30px;
+    padding-left: 40px;
+    font-size: 25px;
+    color:#4c4c4c;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}

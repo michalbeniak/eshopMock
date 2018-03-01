@@ -1,12 +1,53 @@
-<form (ngSubmit)="onSubmit()" #checkout="ngForm" >
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" class="form-control" id="name" required name="name">
-  </div>
-  <button type="submit" 
-  class="button">Submit</button>
-</form>
-<div>
-  <button (click)= "this.cartService.setBasketStage()" class="button">BACK</button>
-
+<div class="checkoutForm">
+    <form class="form" (ngSubmit)="onSubmit()" #checkout="ngForm" >
+        <div>
+          <p class="sectionTitle">
+              Personal details
+          </p>
+          <div class="fieldWrapper">
+            <div class="form-group">
+              <input type="text" placeholder="First Name" class="form-control" id="name" required name="name">
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Last Name" class="form-control" id="name" required name="name">
+            </div>
+          </div>
+          <div class="fieldWrapper">   
+            <div class="form-group">
+              <input placeholder="Email Adsress" type="text" class="form-control" id="name" required name="name">
+            </div>
+            <div class="form-group">
+              <input  placeholder="Number"type="text" class="form-control" id="name" name="name">
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="sectionTitle">
+            Address
+          </p>
+          <div class="fieldWrapper">
+            <div class="form-group">
+              <input type="text" placeholder="Street" class="form-control" id="name" required name="name">
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Number" class="form-control" id="name" required name="name">
+            </div>
+          </div>
+          <div class="fieldWrapper">
+            <div class="form-group">
+              <input type="text" placeholder="City" class="form-control" id="name" required name="name">
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="ZIP Code" class="form-control" id="name" name="name">
+            </div>
+          </div>  
+        </div>
+        
+        <button type="submit" class="nextBtn button">NEXT</button>
+      </form>
+      <div class="backWrapper">
+        <button (click)= "this.cartService.setBasketStage()" class="button backBtn">BACK</button>
+      
+      </div>
 </div>
+
