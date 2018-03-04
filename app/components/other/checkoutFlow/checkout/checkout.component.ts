@@ -10,10 +10,12 @@ import { ContactDetails } from '../../../../models/contact-details';
 export class CheckoutComponent implements OnInit {
   checkboxValue: boolean = false;
   model:ContactDetails = new ContactDetails("","","","","","","","","")
+  modelShip:ContactDetails = new ContactDetails("","","","","","","","","")
   constructor(private cartService:CartServiceService) { }
 
   ngOnInit() {
     this.model=this.cartService.getCheckout();
+    this.modelShip=this.cartService.getShippingCheckout();
   }
 
   onSubmit() {

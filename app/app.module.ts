@@ -31,8 +31,7 @@ import { CartServiceService } from './services/cartService/cart-service.service'
 import { CartService } from './services/storeService/cart.service';
 import { ProductCartComponent } from './components/other/products/product-cart/product-cart.component';
 import { CheckoutComponent } from './components/other/checkoutFlow/checkout/checkout.component';
-import { CartBasketComponent } from './components/other/checkoutFlow//cart-basket/cart-basket.component';
-import { PersonalFormComponent } from './personal-form/personal-form.component';
+import { CartBasketComponent } from './components/other/checkoutFlow/cart-basket/cart-basket.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponentComponent },
@@ -70,8 +69,8 @@ const appRoutes: Routes = [
     BlogComponent,
     ProductCartComponent,
     CheckoutComponent,
-    CartBasketComponent,
-    PersonalFormComponent
+    CartBasketComponent
+    
     
   ],
   imports: [

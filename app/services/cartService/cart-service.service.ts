@@ -9,6 +9,7 @@ import { ContactDetails } from '../../models/contact-details';
 export class CartServiceService {
   
   contactDetails:ContactDetails = new ContactDetails("","","","","","","","","")
+  shippingContactDetails:ContactDetails = new ContactDetails("","","","","","","","","")
   totalAmmount:number=0;
   state:State = new State("checkout");
   constructor(private cart: CartService) { }
@@ -54,7 +55,12 @@ export class CartServiceService {
     this.state.Status = "next";
   }
   getCheckout(){
-    return this.contactDetails
+    return this.contactDetails;
   }
+  getShippingCheckout(){
+    return this.shippingContactDetails;
+  }
+
+  
   
 }
