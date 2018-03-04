@@ -3,10 +3,12 @@ import { CartService } from '../storeService/cart.service';
 import { Product } from '../../models/product';
 import { indexDebugNode } from '@angular/core/src/debug/debug_node';
 import { State } from '../../models/state';
+import { ContactDetails } from '../../models/contact-details';
 
 @Injectable()
 export class CartServiceService {
-
+  
+  contactDetails:ContactDetails = new ContactDetails("","","","","","","","","")
   totalAmmount:number=0;
   state:State = new State("checkout");
   constructor(private cart: CartService) { }
@@ -51,4 +53,8 @@ export class CartServiceService {
   setNextStage(){
     this.state.Status = "next";
   }
+  getCheckout(){
+    return this.contactDetails
+  }
+  
 }

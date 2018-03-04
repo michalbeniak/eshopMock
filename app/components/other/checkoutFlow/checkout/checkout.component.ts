@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartServiceService } from '../../../../services/cartService/cart-service.service';
+import { ContactDetails } from '../../../../models/contact-details';
 
 @Component({
   selector: 'app-checkout',
@@ -7,15 +8,15 @@ import { CartServiceService } from '../../../../services/cartService/cart-servic
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent implements OnInit {
-
+  checkboxValue: boolean = false;
+  model:ContactDetails = new ContactDetails("","","","","","","","","")
   constructor(private cartService:CartServiceService) { }
 
   ngOnInit() {
+    this.model=this.cartService.getCheckout();
   }
 
   onSubmit() {
-    
-    console.log("hello");
     this.cartService.setNextStage();
   }
 }

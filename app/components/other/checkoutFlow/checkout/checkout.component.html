@@ -1,53 +1,153 @@
 <div class="checkoutForm">
-    <form class="form" (ngSubmit)="onSubmit()" #checkout="ngForm" >
-        <div>
-          <p class="sectionTitle">
-              Personal details
-          </p>
-          <div class="fieldWrapper">
-            <div class="form-group">
-              <input type="text" placeholder="First Name" class="form-control" id="name" required name="name">
+    <div>
+      <form class="form" (ngSubmit)="onSubmit()" #checkout="ngForm">
+          <div>
+            <p class="sectionTitle">
+                Personal details
+            </p>
+            <div class="fieldWrapper">
+              <div class="form-group">
+                <input type="text" [(ngModel)]="model.FirstName" required placeholder="First Name" class="form-control" id="FirstName"  name="FirstName" #FirstName="ngModel">
+                  <!--<div *ngIf="!FirstName.errors?.required">
+                    This field is required.
+                  </div>-->
+
+                <div *ngIf="FirstName.invalid && (FirstName.dirty || FirstName.touched)"> 
+              <div *ngIf="FirstName.errors.required">
+                Name is required.
+              </div>
+
             </div>
-            <div class="form-group">
-              <input type="text" placeholder="Last Name" class="form-control" id="name" required name="name">
+              </div>
+              <div class="form-group">
+                <input type="text" [(ngModel)]="model.LastName" placeholder="Last Name" class="form-control" id="lastName" required name="LastName">
+              </div>
+            </div>
+            <div class="fieldWrapper">   
+              <div class="form-group">
+                <input placeholder="Email Adsress"  [(ngModel)]="model.Email" type="text" class="form-control" id="email" required name="email">
+              </div>
+              <div class="form-group">
+                <input  placeholder="Number"type="text" [(ngModel)]="model.NumberTel" class="form-control" id="numberTel" name="numberTel">
+              </div>
             </div>
           </div>
-          <div class="fieldWrapper">   
-            <div class="form-group">
-              <input placeholder="Email Adsress" type="text" class="form-control" id="name" required name="name">
+          <div>
+            <p class="sectionTitle">
+              Address
+            </p>
+            <div class="fieldWrapper">
+              <div class="form-group">
+                <input type="text" placeholder="Street" [(ngModel)]="model.Street" class="form-control" id="street" required name="street">
+              </div>
+              <div class="form-group">
+                <input ngModel type="text" placeholder="Number" [(ngModel)]="model.NumberHouse" class="form-control" id="numberHouse" required name="numberHouse">
+              </div>
             </div>
-            <div class="form-group">
-              <input  placeholder="Number"type="text" class="form-control" id="name" name="name">
-            </div>
+            <div class="fieldWrapper">
+              <div class="form-group">
+                <input type="text" placeholder="City" class="form-control" [(ngModel)]="model.City" id="city" required name="city">
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="ZIP Code" [(ngModel)]="model.ZipCode" class="form-control" id="zip" name="zip">
+              </div>
+            </div>  
+            <div class="fieldWrapper">
+                <div class="form-group">
+                  <input type="text" placeholder="Country" class="form-control" [(ngModel)]="model.Country" id="country" required name="country">
+                </div>
+              </div>  
           </div>
-        </div>
-        <div>
-          <p class="sectionTitle">
-            Address
-          </p>
-          <div class="fieldWrapper">
-            <div class="form-group">
-              <input type="text" placeholder="Street" class="form-control" id="name" required name="name">
-            </div>
-            <div class="form-group">
-              <input type="text" placeholder="Number" class="form-control" id="name" required name="name">
-            </div>
-          </div>
-          <div class="fieldWrapper">
-            <div class="form-group">
-              <input type="text" placeholder="City" class="form-control" id="name" required name="name">
-            </div>
-            <div class="form-group">
-              <input type="text" placeholder="ZIP Code" class="form-control" id="name" name="name">
-            </div>
-          </div>  
-        </div>
-        
-        <button type="submit" class="nextBtn button">NEXT</button>
-      </form>
-      <div class="backWrapper">
-        <button (click)= "this.cartService.setBasketStage()" class="button backBtn">BACK</button>
-      
+          
+          
+          <input id="submit-form" [disabled]="!checkout.form.valid" type="submit" class="hidden">
+        </form>
       </div>
+      <div class="checkboxWrapper">
+          
+          <label for="deliveryAddress">
+            <input class="checkbox" id="deliveryAddress"type="checkbox" [(ngModel)]="checkBoxValue">
+            Delivery address is different to billing address
+          </label>
+      </div>
+
+
+      <div *ngIf="checkBoxValue">
+          <form class="form" (ngSubmit)="onSubmit()" #checkout="ngForm">
+              <div>
+                <p class="sectionTitle">
+                    Personal details
+                </p>
+                <div class="fieldWrapper">
+                  <div class="form-group">
+                    <input type="text" [(ngModel)]="model.FirstName" required placeholder="First Name" class="form-control" id="FirstName"  name="FirstName" #FirstName="ngModel">
+                      <!--<div *ngIf="!FirstName.errors?.required">
+                        This field is required.
+                      </div>-->
+    
+                    <div *ngIf="FirstName.invalid && (FirstName.dirty || FirstName.touched)"> 
+                  <div *ngIf="FirstName.errors.required">
+                    Name is required.
+                  </div>
+    
+                </div>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" [(ngModel)]="model.LastName" placeholder="Last Name" class="form-control" id="lastName" required name="LastName">
+                  </div>
+                </div>
+                <div class="fieldWrapper">   
+                  <div class="form-group">
+                    <input placeholder="Email Adsress"  [(ngModel)]="model.Email" type="text" class="form-control" id="email" required name="email">
+                  </div>
+                  <div class="form-group">
+                    <input  placeholder="Number"type="text" [(ngModel)]="model.NumberTel" class="form-control" id="numberTel" name="numberTel">
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p class="sectionTitle">
+                  Address
+                </p>
+                <div class="fieldWrapper">
+                  <div class="form-group">
+                    <input type="text" placeholder="Street" [(ngModel)]="model.Street" class="form-control" id="street" required name="street">
+                  </div>
+                  <div class="form-group">
+                    <input ngModel type="text" placeholder="Number" [(ngModel)]="model.NumberHouse" class="form-control" id="numberHouse" required name="numberHouse">
+                  </div>
+                </div>
+                <div class="fieldWrapper">
+                  <div class="form-group">
+                    <input type="text" placeholder="City" class="form-control" [(ngModel)]="model.City" id="city" required name="city">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" placeholder="ZIP Code" [(ngModel)]="model.ZipCode" class="form-control" id="zip" name="zip">
+                  </div>
+                </div>  
+                <div class="fieldWrapper">
+                    <div class="form-group">
+                      <input type="text" placeholder="Country" class="form-control" [(ngModel)]="model.Country" id="country" required name="country">
+                    </div>
+                  </div>  
+              </div>
+              
+              
+              <input id="submit-form" [disabled]="!checkout.form.valid" type="submit" class="hidden">
+            </form>
+          </div>
+
+      <div class="buttonWrapper">
+          <div class="backWrapper">
+              <button (click)= "this.cartService.setBasketStage()" class="button backBtn"> BACK </button>
+            </div>
+          <div class="nextWrapper">
+              <label for="submit-form" class="nextBtn" tabindex="0"><span class ="btnText">NEXT</span></label>
+          </div>
+      </div>
+
+
 </div>
+
+
 
