@@ -11,7 +11,7 @@ export class CartServiceService {
   contactDetails:ContactDetails = new ContactDetails("","","","","","","","","")
   shippingContactDetails:ContactDetails = new ContactDetails("","","","","","","","","")
   totalAmmount:number=0;
-  state:State = new State("checkout");
+  state:State = new State("summary");
   constructor(private cart: CartService) { }
 
   ngOnInit() {
