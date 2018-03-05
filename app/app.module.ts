@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule }   from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 
 
 import { AppComponent } from './app.component';
@@ -29,7 +31,8 @@ import { CartServiceService } from './services/cartService/cart-service.service'
 import { CartService } from './services/storeService/cart.service';
 import { ProductCartComponent } from './components/other/products/product-cart/product-cart.component';
 import { CheckoutComponent } from './components/other/checkoutFlow/checkout/checkout.component';
-import { CartBasketComponent } from './components/other/checkoutFlow//cart-basket/cart-basket.component';
+import { CartBasketComponent } from './components/other/checkoutFlow/cart-basket/cart-basket.component';
+import { SummaryComponent } from './components/other/checkoutFlow/summary/summary.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponentComponent },
@@ -67,11 +70,14 @@ const appRoutes: Routes = [
     BlogComponent,
     ProductCartComponent,
     CheckoutComponent,
-    CartBasketComponent
+    CartBasketComponent,
+    SummaryComponent
+    
     
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true }
