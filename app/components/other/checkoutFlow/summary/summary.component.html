@@ -1,4 +1,43 @@
-<p>
-  summary works!
-</p>
-<button (click)= "this.cartService.setCheckoutStage()" class="button">BACK</button>
+<div class="summary">
+  <div>
+    <h3>Cart Summary</h3>
+    <table>
+      <tr>
+        <td>Name</td>
+        <td>Quantity</td>
+        <td>Price</td>
+        <td>Total</td>
+      </tr>
+      <tr *ngFor="let item of repo.productArray">
+        <td>{{item.Name}}</td>
+        <td>{{item.Quantity}}</td>
+        <td>{{item.Price}}</td>
+        <td>{{item.Price*item.Quantity}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div>
+     <h3>Shipping Address</h3>
+     <p>{{cartService.contactDetails.FirstName}} {{cartService.contactDetails.LastName}}</p>
+     <p>{{cartService.contactDetails.Email}}</p>
+     <p>{{cartService.contactDetails.NumberTel}}</p>
+     <p>{{cartService.contactDetails.Street}},{{cartService.contactDetails.NumberHouse}}</p>
+     <p>{{cartService.contactDetails.City}}</p>
+     <p>{{cartService.contactDetails.ZipCode}}</p>
+     <p>{{cartService.contactDetails.Country}}</p> 
+
+     <h3>Shipping Method</h3>
+     <p>one shipment</p>
+     <p>Shipsin 1-5 bussiness bay.additional requered time prosaad.</p>
+  </div>1
+  <div>
+    <h3>Payment Info</h3>
+    <p>Secure Payment info</p>
+  </div>
+  <div>
+    <h3>Total</h3>
+    <p>{{cartService.getTotalAmmount()}}$</p>
+  </div>
+  <button (click)= "cartService.setCheckoutStage()" class="button">BACK</button>
+</div>

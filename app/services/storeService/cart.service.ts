@@ -9,8 +9,12 @@ export class CartService {
   constructor() { }
 
   ngOnInit(){
+
     console.log(this.count);
 
   }
+  test(){
+    console.log(this.productArray);
 
+  }
 }
