@@ -7,6 +7,5 @@
 </div>
 
 <div *ngIf="this.cartService.state.Status == 'next'">
-  <h2>NEXT</h2>
-  <button (click)= "this.cartService.setCheckoutStage()" class="button">BACK</button>
+  <app-summary></app-summary>
   </div>
